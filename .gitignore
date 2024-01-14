@@ -1,0 +1,16 @@
+/node_modules
+yarn-error.log
+
+/build
+/coverage
+
+.env
+*.sqlite
+
+../planejamento - database - Ordem
+../planejamento - database - equipment
+../planejamento - database - itens
+../planejamento - database - itensofLine
+../planejamento - database - technician
+../planejamento - endpoint
+
