@@ -30,6 +30,11 @@ router.put(
   TechnicianController.updateByIdValidation,
   TechnicianController.updateById
 );
+router.delete(
+  "/technicians/:id",
+  TechnicianController.deleteByIdValidation,
+  TechnicianController.deleteById
+);
 
 
 export { router };
