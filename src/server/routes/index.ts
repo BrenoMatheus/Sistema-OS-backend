@@ -25,6 +25,11 @@ router.get(
   TechnicianController.getByIdValidation,
   TechnicianController.getById
 );
+router.put(
+  "/technicians/:id",
+  TechnicianController.updateByIdValidation,
+  TechnicianController.updateById
+);
 
 
 export { router };
