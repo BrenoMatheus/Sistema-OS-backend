@@ -3,5 +3,5 @@ export interface ITechnician{
     name: string, 
     email: string, 
     category: string,
-    description: string,
+    description?: string,
   }
