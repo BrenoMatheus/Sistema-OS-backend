@@ -20,7 +20,11 @@ router.post(
   TechnicianController.createValidation,
   TechnicianController.create
 );
-
+router.get(
+  "/technicians/:id",
+  TechnicianController.getByIdValidation,
+  TechnicianController.getById
+);
 
 
 export { router };
