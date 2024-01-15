@@ -16,9 +16,9 @@ export const create = async (
       return result;
     }
 
-    return new Error("Erro ao cadastrar o tecnico");
+    return new Error("Erro ao cadastrar o equipamento");
   } catch (error) {
     console.log(error);
-    return new Error("Erro ao cadastrar o tecnico");
+    return new Error("Erro ao cadastrar o equipamento");
   }
 };
