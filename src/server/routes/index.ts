@@ -1,8 +1,6 @@
 import { Router } from "express";
 
-import {
-  TechnicianController,
-} from "./../controllers";
+import { TechnicianController } from "./../controllers";
 
 const router = Router();
 
@@ -35,6 +33,5 @@ router.delete(
   TechnicianController.deleteByIdValidation,
   TechnicianController.deleteById
 );
-
 
 export { router };
