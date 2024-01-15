@@ -4,5 +4,6 @@ declare module "knex/types/tables" {
   interface Tables {
     technician: ITechnician;
     equipment: IEquipment;
+    item: IItem;
   }
 }
