@@ -10,10 +10,17 @@ router.get("/", (_, res) => {
   return res.send("Olá, DEV!");
 });
 
+router.get(
+  "/technicians",
+  TechnicianController.getAllValidation,
+  TechnicianController.getAll
+);
 router.post(
   "/technicians",
   TechnicianController.createValidation,
   TechnicianController.create
 );
+
+
 
 export { router };
