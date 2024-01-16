@@ -1,6 +1,7 @@
 import { Router } from "express";
 
 import { EquipmentController, TechnicianController } from "./../controllers";
+import { ItemController } from "../controllers/equipments copy";
 
 const router = Router();
 
@@ -60,6 +61,33 @@ router.delete(
   "/equipments/:id",
   EquipmentController.deleteByIdValidation,
   EquipmentController.deleteById
+);
+
+// route Item
+router.get(
+  "/items",
+  ItemController.getAllValidation,
+  ItemController.getAll
+);
+router.post(
+  "/items",
+  ItemController.createValidation,
+  ItemController.create
+);
+router.get(
+  "/items/:id",
+  ItemController.getByIdValidation,
+  ItemController.getById
+);
+router.put(
+  "/items/:id",
+  ItemController.updateByIdValidation,
+  ItemController.updateById
+);
+router.delete(
+  "/items/:id",
+  ItemController.deleteByIdValidation,
+  ItemController.deleteById
 );
 
 export { router };
