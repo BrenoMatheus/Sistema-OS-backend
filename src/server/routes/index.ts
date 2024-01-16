@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 import { EquipmentController, TechnicianController } from "./../controllers";
-import { ItemController } from "../controllers/equipments copy";
+import { ItemController } from "../controllers/items";
 
 const router = Router();
 

@@ -1,5 +1,6 @@
 export enum ETableNames {
     technician = "technician",
     equipment = "equipment",
-    item = "item"
+    item = "item",
+    itemofLine = "itemofLine"
 }
