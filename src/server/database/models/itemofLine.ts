@@ -1,5 +1,4 @@
-
-export interface IItem{
+export interface IItemofLine{
   id: number,
   ordemID: number,
   name: string, 
