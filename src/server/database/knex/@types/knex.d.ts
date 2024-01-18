@@ -1,4 +1,4 @@
-import { IEquipment, IItem, IItemofLine, ITechnician } from "../../models";
+import { IEquipment, IItem, IItemofLine, IOrder, ITechnician } from "../../models";
 
 declare module "knex/types/tables" {
   interface Tables {
@@ -6,5 +6,6 @@ declare module "knex/types/tables" {
     equipment: IEquipment;
     item: IItem;
     itemofLine: IItemofLine;
+    order: IOrder;
   }
 }
