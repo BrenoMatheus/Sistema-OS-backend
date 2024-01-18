@@ -1,7 +1,12 @@
 import { Router } from "express";
 
-import { EquipmentController, TechnicianController } from "./../controllers";
-import { ItemController } from "../controllers/items";
+import {
+  EquipmentController,
+  OrderController,
+  TechnicianController,
+  ItemController,
+  ItemofLineController,
+} from "./../controllers";
 
 const router = Router();
 
@@ -36,6 +41,25 @@ router.delete(
   TechnicianController.deleteById
 );
 
+// route Item
+router.get("/items", ItemController.getAllValidation, ItemController.getAll);
+router.post("/items", ItemController.createValidation, ItemController.create);
+router.get(
+  "/items/:id",
+  ItemController.getByIdValidation,
+  ItemController.getById
+);
+router.put(
+  "/items/:id",
+  ItemController.updateByIdValidation,
+  ItemController.updateById
+);
+router.delete(
+  "/items/:id",
+  ItemController.deleteByIdValidation,
+  ItemController.deleteById
+);
+
 // route Equipment
 router.get(
   "/equipments",
@@ -63,31 +87,54 @@ router.delete(
   EquipmentController.deleteById
 );
 
-// route Item
-router.get(
-  "/items",
-  ItemController.getAllValidation,
-  ItemController.getAll
-);
+// route Order
+router.get("/orders", OrderController.getAllValidation, OrderController.getAll);
 router.post(
-  "/items",
-  ItemController.createValidation,
-  ItemController.create
+  "/orders",
+  OrderController.createValidation,
+  OrderController.create
 );
 router.get(
-  "/items/:id",
-  ItemController.getByIdValidation,
-  ItemController.getById
+  "/orders/:id",
+  OrderController.getByIdValidation,
+  OrderController.getById
 );
 router.put(
-  "/items/:id",
-  ItemController.updateByIdValidation,
-  ItemController.updateById
+  "/orders/:id",
+  OrderController.updateByIdValidation,
+  OrderController.updateById
 );
 router.delete(
-  "/items/:id",
-  ItemController.deleteByIdValidation,
-  ItemController.deleteById
+  "/orders/:id",
+  OrderController.deleteByIdValidation,
+  OrderController.deleteById
+);
+
+// route ItemofLine
+router.get(
+  "/itemoflines",
+  ItemofLineController.getAllValidation,
+  ItemofLineController.getAll
+);
+router.post(
+  "/itemoflines",
+  ItemofLineController.createValidation,
+  ItemofLineController.create
+);
+router.get(
+  "/itemoflines/:id",
+  ItemofLineController.getByIdValidation,
+  ItemofLineController.getById
+);
+router.put(
+  "/itemoflines/:id",
+  ItemofLineController.updateByIdValidation,
+  ItemofLineController.updateById
+);
+router.delete(
+  "/itemoflines/:id",
+  ItemofLineController.deleteByIdValidation,
+  ItemofLineController.deleteById
 );
 
 export { router };
