@@ -6,12 +6,18 @@ export async function up(knex: Knex) {
   return knex.schema
     .createTable(ETableNames.itemofLine, (table) => {
       table.bigIncrements("id").primary().index();
-      table.string("name", 70).checkLength("<=", 70).index().notNullable();
-      table.float("price", 50).checkLength("<=", 50).index().notNullable();
       table.integer("amount", 50).checkLength("<=", 50).index().notNullable();
       table.float("total", 50).checkLength("<=", 50).index().notNullable();
       table
         .bigInteger("ordemID")
+        .index()
+        .notNullable()
+        .references("id")
+        .inTable(ETableNames.itemofLine)
+        .onUpdate("CASCADE")
+        .onDelete("RESTRICT");
+      table
+        .bigInteger("itemID")
         .index()
         .notNullable()
         .references("id")
