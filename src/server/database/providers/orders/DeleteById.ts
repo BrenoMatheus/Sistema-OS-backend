@@ -7,9 +7,9 @@ export const deleteById = async (id: number): Promise<void | Error> => {
 
     if (result > 0) return;
 
-    return new Error("Erro ao apagar o produto ou serviço da os");
+    return new Error("Erro ao apagar a OS");
   } catch (error) {
     console.log(error);
-    return new Error("Erro ao apagar o produto ou serviço da os");
+    return new Error("Erro ao apagar a OS");
   }
 };

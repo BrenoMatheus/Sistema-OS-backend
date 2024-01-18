@@ -13,9 +13,9 @@ export const updateById = async (
 
     if (result > 0) return;
 
-    return new Error("Erro ao atualizar o produto ou serviço da os");
+    return new Error("Erro ao atualizar a OS");
   } catch (error) {
     console.log(error);
-    return new Error("Erro ao atualizar o produto ou serviço da os");
+    return new Error("Erro ao atualizar a OS");
   }
 };

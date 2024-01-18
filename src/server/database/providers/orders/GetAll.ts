@@ -28,6 +28,6 @@ export const getAll = async (
     return result;
   } catch (error) {
     console.log(error);
-    return new Error("Erro ao consultar o produto ou serviço da os");
+    return new Error("Erro ao consultar a OS");
   }
 };

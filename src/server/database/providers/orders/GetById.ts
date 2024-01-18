@@ -11,9 +11,9 @@ export const getById = async (id: number): Promise<IOrder | Error> => {
 
     if (result) return result;
 
-    return new Error("produto ou serviço da os não encontrado");
+    return new Error("OS não encontrado");
   } catch (error) {
     console.log(error);
-    return new Error("Erro ao consultar o produto ou serviço da os");
+    return new Error("Erro ao consultar a OS");
   }
 };

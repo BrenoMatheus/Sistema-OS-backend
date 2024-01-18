@@ -16,9 +16,9 @@ export const create = async (
       return result;
     }
 
-    return new Error("Erro ao cadastrar os serviços ou peças");
+    return new Error("Erro ao cadastrar a OS");
   } catch (error) {
     console.log(error);
-    return new Error("Erro ao cadastrar os serviços ou peças");
+    return new Error("Erro ao cadastrar a OS");
   }
 };
