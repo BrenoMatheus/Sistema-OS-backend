@@ -3,5 +3,6 @@ export enum ETableNames {
     equipment = "equipment",
     item = "item",
     order = "order",
-    itemofLine = "itemofLine"
+    itemofLine = "itemofLine",
+    user = "user"
 }

@@ -10,15 +10,16 @@ export async function up(knex: Knex) {
       table.string("defect", 150).checkLength("<=", 150).notNullable();
       table.string("causes", 150).checkLength("<=", 150).notNullable();
       table.string("solution", 150).checkLength("<=", 150).notNullable();
-      table.dateTime("date_init_os").index().notNullable();
-      table.dateTime("date_end_os").index();
+      table.boolean("status").notNullable();
+      table.date("date_init_os").index().notNullable();
+      table.date("date_end_os");
       table.float("total", 50).checkLength("<=", 50).notNullable();
       table
         .bigInteger("equipmentID")
         .index()
         .notNullable()
         .references("id")
-        .inTable(ETableNames.order)
+        .inTable(ETableNames.equipment)
         .onUpdate("CASCADE")
         .onDelete("RESTRICT");
       table
@@ -26,7 +27,7 @@ export async function up(knex: Knex) {
         .index()
         .notNullable()
         .references("id")
-        .inTable(ETableNames.order)
+        .inTable(ETableNames.technician)
         .onUpdate("CASCADE")
         .onDelete("RESTRICT");
 
