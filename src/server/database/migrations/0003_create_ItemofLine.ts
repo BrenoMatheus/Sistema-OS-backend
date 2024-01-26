@@ -9,11 +9,11 @@ export async function up(knex: Knex) {
       table.integer("amount", 50).checkLength("<=", 50).index().notNullable();
       table.float("total", 50).checkLength("<=", 50).index().notNullable();
       table
-        .bigInteger("ordemID")
+        .bigInteger("orderID")
         .index()
         .notNullable()
         .references("id")
-        .inTable(ETableNames.itemofLine)
+        .inTable(ETableNames.order)
         .onUpdate("CASCADE")
         .onDelete("RESTRICT");
       table
@@ -21,7 +21,7 @@ export async function up(knex: Knex) {
         .index()
         .notNullable()
         .references("id")
-        .inTable(ETableNames.itemofLine)
+        .inTable(ETableNames.item)
         .onUpdate("CASCADE")
         .onDelete("RESTRICT");
 
