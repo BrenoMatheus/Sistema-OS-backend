@@ -5,6 +5,7 @@ export interface IOrder{
   type: string, 
   defect: string, 
   causes: string, 
+  status: boolean, 
   solution: string, 
   date_init_os: Date, 
   date_end_os?: Date,

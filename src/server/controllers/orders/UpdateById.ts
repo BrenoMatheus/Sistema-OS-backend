@@ -19,6 +19,7 @@ export const updateByIdValidation = validation((getSchema) => ({
       defect: yup.string().required().min(3).max(150),
       causes: yup.string().required().min(3).max(150),
       solution: yup.string().required().min(3).max(150),
+      status: yup.boolean().required(),
       date_init_os: yup.date().required(),
       date_end_os: yup.date().optional(),
       total: yup.number().required(),
