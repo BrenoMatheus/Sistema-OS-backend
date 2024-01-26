@@ -13,7 +13,7 @@ export async function up(knex: Knex) {
       table.boolean("status").notNullable();
       table.date("date_init_os").index().notNullable();
       table.date("date_end_os");
-      table.float("total", 50).checkLength("<=", 50).notNullable();
+      table.float("total", 50).notNullable();
       table
         .bigInteger("equipmentID")
         .index()

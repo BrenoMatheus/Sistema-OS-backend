@@ -7,8 +7,8 @@ export async function up(knex: Knex) {
     .createTable(ETableNames.item, (table) => {
       table.bigIncrements("id").primary().index();
       table.string("name", 70).checkLength("<=", 70).index().notNullable();
-      table.float("price", 50).checkLength("<=", 50).index().notNullable();
-      table.integer("amount", 50).checkLength("<=", 50).index();
+      table.float("price", 50).index().notNullable();
+      table.integer("amount", 50).index();
 
       table.comment("Table used to store system itens");
     })

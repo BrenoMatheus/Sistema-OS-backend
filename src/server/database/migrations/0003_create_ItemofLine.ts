@@ -6,8 +6,8 @@ export async function up(knex: Knex) {
   return knex.schema
     .createTable(ETableNames.itemofLine, (table) => {
       table.bigIncrements("id").primary().index();
-      table.integer("amount", 50).checkLength("<=", 50).index().notNullable();
-      table.float("total", 50).checkLength("<=", 50).index().notNullable();
+      table.integer("amount", 50).index().notNullable();
+      table.float("total", 50).index().notNullable();
       table
         .bigInteger("orderID")
         .index()
