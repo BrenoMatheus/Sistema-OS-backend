@@ -18,17 +18,27 @@ export const seed = async (knex: Knex) => {
 const item = [
   {
     name: "Roda",
-    price: "1000",
-    amount: "100"
+    price: 1000,
+    amount: 100
   },
   {
     name: "Mangueira",
-    price: "200",
-    amount: "70"
+    price: 200,
+    amount: 70
+  },
+  {
+    name: "Hora técnica",
+    price: 150,
+    amount: 99999
+  },
+  {
+    name: "pneu",
+    price: 1200,
+    amount: 20
   },
   {
     name: "Alicate",
-    price: "30",
-    amount: "50"
+    price: 30,
+    amount: 50
   },
 ];

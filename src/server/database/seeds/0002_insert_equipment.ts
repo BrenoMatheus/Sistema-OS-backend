@@ -35,4 +35,10 @@ const equipment = [
     type: "Eletrica",
     description: "Equipamento Eletrica"
   },
+  {
+    name: "RC44-25",
+    serieNumber: "753S2023",
+    type: "Combustão",
+    description: "Equipamento á combustão RC"
+  },
 ];

@@ -18,19 +18,19 @@ export const seed = async (knex: Knex) => {
 
 const technician = [
   {
-    name: "Teste",
+    name: "Roberto",
     email: "test@mail.com",
     category: "mecanico",
     description: "Este é o teste de mecanico",
   },
   {
-    name: "Teste",
+    name: "Sergio",
     email: "test1@mail.com",
     category: "eletricista",
     description: "Este é o teste de eletricista",
   },
   {
-    name: "Teste",
+    name: "Leandro",
     email: "test2@mail.com",
     category: "TTT",
     description: "Este é o teste de TTT",
