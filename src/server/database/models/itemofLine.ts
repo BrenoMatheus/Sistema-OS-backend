@@ -1,6 +1,6 @@
 export interface IItemofLine{
   id: number,
-  ordemID: number,
+  orderID: number,
   itemID: number,
   amount: number,
   total: number,

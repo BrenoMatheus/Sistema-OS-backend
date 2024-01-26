@@ -15,7 +15,7 @@ export const createValidation = validation((getSchema) => ({
     yup.object().shape({
       amount: yup.number().required(),
       total: yup.number().required(),
-      ordemID: yup.number().integer().required(),
+      orderID: yup.number().integer().required(),
       itemID: yup.number().integer().required(),
     })
   ),
