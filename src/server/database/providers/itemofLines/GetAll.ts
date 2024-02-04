@@ -5,14 +5,14 @@ import { Knex } from "../../knex";
 export const getAll = async (
   page: number,
   limit: number,
-  filter: string,
+  filter: number,
   id = 0
 ): Promise<IItemofLine[] | Error> => {
   try {
     const result = await Knex(ETableNames.itemofLine)
       .select("*")
       .where("id", Number(id))
-      .orWhere("orderID", "like", `%${Number(filter)}%`)
+      .orWhere("orderID", Number(filter))
       .offset((page - 1) * limit)
       .limit(limit);
 

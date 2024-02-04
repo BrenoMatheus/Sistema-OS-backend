@@ -9,7 +9,7 @@ interface IQueryProps {
   id?: number;
   page?: number;
   limit?: number;
-  filter?: string;
+  filter?: number;
 }
 export const getAllValidation = validation((getSchema) => ({
   query: getSchema<IQueryProps>(
@@ -17,7 +17,7 @@ export const getAllValidation = validation((getSchema) => ({
       page: yup.number().optional().moreThan(0),
       limit: yup.number().optional().moreThan(0),
       id: yup.number().integer().optional().default(0),
-      filter: yup.string().optional(),
+      filter: yup.number().integer().optional().default(0),
     })
   ),
 }));
@@ -29,7 +29,7 @@ export const getAll = async (
   const result = await ItemofLineProvider.getAll(
     req.query.page || 1,
     req.query.limit || 7,
-    req.query.filter || "",
+    Number(req.query.filter || 0),
     Number(req.query.id || 0)
   );
   const count = await ItemofLineProvider.count(req.query.filter);
